@@ -6,6 +6,7 @@ class Pillow < Formula
   sha1 '2e07dd7545177019331e8f3916335b69869e82b0'
   head 'https://github.com/python-imaging/Pillow.git'
 
+  depends_on :x11 unless MacOS::CLT.installed?
   depends_on :python => :recommended
   depends_on :python3 => :optional
   depends_on 'little-cms'
